@@ -1,20 +1,23 @@
-import { StyleSheet, Text, View } from 'react-native'
-import { ThemedText } from '@/components/ThemedText';
-import React from 'react'
-// import { blue } from 'react-native-reanimated/lib/typescript/reanimated2/Colors';
+import {StyleSheet, Text, View} from 'react-native'
+import { StatusBar } from 'expo-status-bar';
+import {Link} from 'expo-router'
 
-const Index = () => {
-  return (
-	<View>
-	  <ThemedText>Aura</ThemedText>
-	  <ThemedText>Aura</ThemedText>
-	  <ThemedText>Aura</ThemedText>
-	  <Text style={{color:'white'}}>Aura</Text>
-	  <ThemedText>Aura</ThemedText>
-	</View>
-  )
+export default function App(){
+	return (
+		<View style={styles.container}>
+			<Text>Aora!</Text>
+			<StatusBar style='auto'/>
+			<Link href="/profile" style={{color: 'blue'}}>Go to Profile</Link>
+		</View>
+	);
 }
 
-export default Index
+const styles = StyleSheet.create({
+	container: {
+		flex: 1,
+		backgroundColor: '#fff',
+		alignItems: 'center',
+		justifyContent: 'center',
+	},
+});
 
-const styles = StyleSheet.create({})
